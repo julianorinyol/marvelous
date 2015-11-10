@@ -17,7 +17,7 @@
   </head>
   <body ng-app="marvelous">
     <div class='container' ng-controller="MainCtrl"  >
-      <div class='row col-md-8 col-md-offset-2' id='page-container' class='col-md-12' >
+      <div class='row col-lg-8 col-lg-offset-2' id='page-container' class='col-lg-12' >
           <h1 id='title'>{{title}}</h1>
           <p id='intro-paragraph'>Lorem Ipsum is simply dummy text of the printing <br>
           and typesetting industry. Lorem Ipsum has been <br>
@@ -25,9 +25,9 @@
           
           <div id='add-an-item'><p >ADD AN ITEM</p></div>
 
-    <div class='col-md-4' id='input-area'>
+    <div class='col-lg-4' id='input-area'>
 
-          <form class='col-md-12' ng-submit="addItem()">
+          <form class='col-lg-12' ng-submit="addItem()">
             <input class='col-xs-12'type="text" id='enter-item-input' placeholder="ENTER ITEM" ng-model="newItem"></input>
             <select class='col-xs-12' ng-model="listName">
               <option value="items">CHOOSE COLUMN</option>
@@ -45,20 +45,20 @@
 
         </div>  <!-- input area -->
 
-       <div class='col-md-8' id='display-area'>
-          <div class='col-md-6 column'>
-            <div class="column-title col-md-12"><p>{{column1name}}</p></div>
+       <div class='col-lg-8' id='display-area'>
+          <div class='col-lg-6 column'>
+            <div class="column-title col-lg-12"><p>{{column1name}}</p></div>
             <div class='list'>
               <div class='listing' ng-repeat="item in items | filter:search" >
-                <span class="item-name">{{item}}</span> <span class='glyphicon glyphicon-remove remove-button' ng-click="deleteItem(items, item)"></span>
+                <span class="item-name">{{item}}</span> <span class='remove-button' ng-click="deleteItem(items, item)"></span>
               </div>
             </div>
           </div>
-          <div class='col-md-6 column'>
-            <div class="column-title col-md-12"><p>{{column2name}}</p></div>
+          <div class='col-lg-6 column'>
+            <div class="column-title col-lg-12"><p>{{column2name}}</p></div>
             <div class='list'>
               <div class='listing' ng-repeat="otherItem in otherItems | filter:search">
-                <span class="item-name" >{{otherItem}}</span> <span class='glyphicon glyphicon-remove remove-button'  ng-click="deleteItem(otherItems, otherItem)"></span>
+                <span class="item-name" >{{otherItem}}</span> <span class='remove-button'  ng-click="deleteItem(otherItems, otherItem)"></span>
               </div>
             </div>
           </div>

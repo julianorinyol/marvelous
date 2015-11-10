@@ -67,7 +67,7 @@ body {
 	padding: 0px;
 	height:418px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1170px) {
 	#input-area {
 		box-sizing: border-box;
 		padding: 0px;
@@ -145,11 +145,13 @@ body {
 }
 .column {
 	padding: 0;
-	margin: .3%;
+	margin: .5%;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1170px) {
 	.column {
 	    width: 49%;
+	    min-height: 400px;
+	    background: #79818e;
 	}
 	#display-area {
 		 min-height: 418px;
@@ -177,9 +179,14 @@ body {
 	overflow: hidden;
 }
 .list .listing:nth-child(odd) {
-	color: white;
+	color: #f2f3f5;
 	background: #bcc1c7;
 }
+.list .listing:nth-child(even) {
+	color: #bcc1c7;
+	background: #f2f3f5;
+}
+
 
 .item-name {
     line-height: 50px;
@@ -187,7 +194,17 @@ body {
     font-size: 1.2em;
 }
 .remove-button {
-	position: absolute;
-    right: 10px;
-    top: 18px;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    right: 7px;
+    top: 12px;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+}
+.list .listing:nth-child(even) .remove-button {
+    background-image: url('images/grey-x.png');
+}
+.list .listing:nth-child(odd) .remove-button {
+    background-image: url('images/white-x.png');
 }
