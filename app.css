@@ -8,6 +8,7 @@
 body {
 	color: orange;
 	font-family: 'helvetica', serif;
+    background: #79818e ;
 }
 
 #page-container {
@@ -93,7 +94,20 @@ body {
 	background: white;
 	 min-height: 418px;
     opacity: .7;
-	/*padding: 0px;*/
+	padding: 5px;
     margin-left: 15px;
     width: 68.666%;
+}
+.column {
+	padding: 0;
+	outline: 1px red solid;
+}
+.column-title {
+    height: 50px;
+    background: blue;
+    opacity: 0.2;
+}
+.column-title p {
+	line-height: 50px;
+	text-align: center;
 }

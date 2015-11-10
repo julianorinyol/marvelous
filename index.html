@@ -46,15 +46,14 @@
         </div>  <!-- input area -->
 
        <div class='col-md-8' id='display-area'>
-          <div class='col-md-6'>
-            <p>{{column1name}}</p>
-
+          <div class='col-md-6 column'>
+            <div class="column-title col-md-12"><p>{{column1name}}</p></div>
             <div class='listing' ng-repeat="item in items" >
               {{item}} <span class='glyphicon glyphicon-remove'></span>
             </div>
           </div>
-          <div class='col-md-6'>
-            <p>{{column2name}}</p>
+          <div class='col-md-6 column'>
+            <div class="column-title col-md-12"><p>{{column2name}}</p></div>
             <div class='listing' ng-repeat="otherItem in otherItems">
               {{otherItem}} <span class='glyphicon glyphicon-remove'></span>
             </div>
