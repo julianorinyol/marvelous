@@ -1,0 +1,13 @@
+/*background #79818e*/
+/*intro text #8cffee*/
+/*enter item: #9aa1ab*/
+/*column 1: #505d70*/
+/*light item: #f2f3f5*/
+/*dark item: bcc1c7 */
+
+
+
+ #background-image {
+  	background-image: url(./images/marvelous.jpg);
+  	background-repeat: no-repeat;
+  }
