@@ -5,6 +5,18 @@
 /*light item: #f2f3f5*/
 /*dark item: bcc1c7 */
 
+/*********************************** Dev styles **********************************************/
+
+#input-area, #search-container, #display-area {
+	/*outline: 5px solid pink;*/
+
+}
+.column, .listing {
+	/*outline: 1px solid red;*/
+}
+/*********************************** General Styles  **********************************************/
+
+
 body {
 	color: orange;
 	font-family: 'helvetica', serif;
@@ -12,7 +24,7 @@ body {
 }
 
 #page-container {
-	background-image: url(./images/marvelous-skinny.jpg);
+	/*background-image: url(./images/marvelous-skinny.jpg);*/
 	background-repeat: no-repeat;
 	height: 1000px;
 	background-size: 760px;
@@ -30,7 +42,7 @@ body {
 
 #add-an-item {
 	background: #505d70;
-	opacity: .7;
+	/*opacity*/: .7;
 	height:45px;
     margin: 0 0 15px 0;
 
@@ -41,9 +53,9 @@ body {
 	line-height: 45px;
 }
 
+
 /*********************************** Input Area  **********************************************/
 #input-area {
-	outline: 5px solid pink;
 	box-sizing: border-box;
 	padding: 0px;
 	width: 29%;
@@ -54,10 +66,9 @@ body {
 }
 #input-area button, #input-area select, #enter-item-input {
     height: 55px;
-    opacity: .5;
+    /*opacity*/: .5;
     border: 3px white solid;
 }
-
 
 #enter-item-input {
     margin: 0 0 14px 0;
@@ -67,13 +78,13 @@ body {
 }
 #input-area button {
 	margin-bottom: 47px;
+	background: #505d70;
 }
 
 #search-container { 
 	position:relative; 
 	padding:0; 
 	margin:0; 
-	outline: 5px red dotted;
 }
 #search { 
 	height:20px; 
@@ -89,34 +100,46 @@ body {
 /*********************************** Display Area  **********************************************/
 
 #display-area {
-	outline: 5px solid pink;
 	box-sizing: border-box;
 	background: white;
 	 min-height: 418px;
-    opacity: .7;
+    /*opacity: .7;*/
 	padding: 5px;
     margin-left: 15px;
     width: 68.666%;
 }
 .column {
 	padding: 0;
-	outline: 1px red solid;
+	margin: .3%;
+    width: 49%;
 }
 .column-title {
     height: 50px;
-    background: blue;
-    opacity: 0.2;
+    background: #505d70;
+    /*opacity*/: 0.2;
+    position: relative;
 }
 .column-title p {
 	line-height: 50px;
 	text-align: center;
+	color: white;
 }
-
+.list {
+}
 .listing {
 	height: 50px;
-	outline: 1px pink dashed;
+	color: #bcc1c7;
 }
 .list .listing:nth-child(odd) {
 	color: white;
-	background: blue;
+	background: #bcc1c7;
+}
+
+.item-name {
+    line-height: 50px;
+    margin: 20px;
+    font-size: 1.2em;
+}
+.remove-button {
+	margin-left: 120px;
 }
