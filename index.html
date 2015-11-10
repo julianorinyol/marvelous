@@ -46,19 +46,21 @@
         </div>  <!-- input area -->
 
        <div class='col-lg-8' id='display-area'>
-          <div class='col-lg-6 column'>
-            <div class="column-title col-lg-12"><p>{{column1name}}</p></div>
-            <div class='list'>
-              <div class='listing' ng-repeat="item in items | filter:search" >
-                <span class="item-name">{{item}}</span> <span class='remove-button' ng-click="deleteItem(items, item)"></span>
+          <div id='column-container'>
+            <div class='col-lg-6 column'>
+              <div class="column-title col-lg-12"><p>{{column1name}}</p></div>
+              <div class='list'>
+                <div class='listing' ng-repeat="item in items | filter:search" >
+                  <span class="item-name">{{item}}</span> <span class='remove-button' ng-click="deleteItem(items, item)"></span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class='col-lg-6 column'>
-            <div class="column-title col-lg-12"><p>{{column2name}}</p></div>
-            <div class='list'>
-              <div class='listing' ng-repeat="otherItem in otherItems | filter:search">
-                <span class="item-name" >{{otherItem}}</span> <span class='remove-button'  ng-click="deleteItem(otherItems, otherItem)"></span>
+            <div class='col-lg-6 column'>
+              <div class="column-title col-lg-12"><p>{{column2name}}</p></div>
+              <div class='list'>
+                <div class='listing' ng-repeat="otherItem in otherItems | filter:search">
+                  <span class="item-name" >{{otherItem}}</span> <span class='remove-button'  ng-click="deleteItem(otherItems, otherItem)"></span>
+                </div>
               </div>
             </div>
           </div>
