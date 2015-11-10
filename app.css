@@ -31,7 +31,33 @@ body {
 	background: #505d70;
 	opacity: .7;
 	height:45px;
+    margin: 0 0 15px 0;
+
+}
+#add-an-item p{
 	text-align: center;
 	font-size: 1.4em;
 	line-height: 45px;
+}
+
+/*********************************** Input Area  **********************************************/
+#input-area {
+	outline: 5px solid pink;
+	box-sizing: border-box;
+	/*padding: 0px;*/
+	width: 29%;
+	height:418px;
+}
+
+/*********************************** Display Area  **********************************************/
+
+#display-area {
+	outline: 5px solid pink;
+	box-sizing: border-box;
+	background: white;
+	 min-height: 418px;
+    opacity: .7;
+	/*padding: 0px;*/
+    margin-left: 15px;
+    width: 68.666%;
 }
