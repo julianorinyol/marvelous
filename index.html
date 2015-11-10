@@ -27,9 +27,9 @@
 
     <div class='col-md-4' id='input-area'>
 
-          <form class='col-md-12'>
-            <input class='col-md-12'type="text" id='enter-item-input' placeholder="ENTER ITEM"></input>
-            <select class='col-md-12'>
+          <form class='col-md-12' ng-submit="addItem()">
+            <input class='col-md-12'type="text" id='enter-item-input' placeholder="ENTER ITEM" ng-model="newItem"></input>
+            <select class='col-md-12' ng-model="listName">
               <option value="items">CHOOSE COLUMN</option>
               <option value="items">items</option>
               <option value="otherItems">other items</option>

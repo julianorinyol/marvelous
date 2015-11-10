@@ -33,5 +33,20 @@ function($scope){
   	'ITEM3',
   	'ITEM4'
   ];
-  
+    $scope.addItem = function(){
+    	if($scope.listName == 'items' && $scope.items.indexOf($scope.newItem) == -1){
+  	    $scope.items.push($scope.newItem);
+    	} else if($scope.listName == 'otherItems' && $scope.otherItems.indexOf($scope.newItem) == -1) {
+    		$scope.otherItems.push($scope.newItem);
+    	}
+      $scope.newItem = '';
+    };
+    $scope.deleteItem = function(array, element) {
+    	var index = array.indexOf(element);
+    	if (index > -1) {
+  	    array.splice(index, 1);
+  	 }
+    }
+    $scope.listName = 'items'
+
 }]);
