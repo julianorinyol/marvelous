@@ -7,6 +7,7 @@
 
 body {
 	color: orange;
+	font-family: 'helvetica', serif;
 }
 
 #page-container {
@@ -17,9 +18,20 @@ body {
 	background-position: center;
 }
 #title {
-	font-size: 4.5em;
-	margin: 142px 0 13px 0;
+    font-size: 4.2em;
+    margin: 146px 0 12px -3px;
+    font-family: 'Merriweather', serif;
 }
 #intro-paragraph {
 	font-size: 1.3em;
+	margin: 0 0 51px 0;
+}
+
+#add-an-item {
+	background: #505d70;
+	opacity: .7;
+	height:45px;
+	text-align: center;
+	font-size: 1.4em;
+	line-height: 45px;
 }
