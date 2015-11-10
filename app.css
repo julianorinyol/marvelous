@@ -111,3 +111,12 @@ body {
 	line-height: 50px;
 	text-align: center;
 }
+
+.listing {
+	height: 50px;
+	outline: 1px pink dashed;
+}
+.list .listing:nth-child(odd) {
+	color: white;
+	background: blue;
+}
