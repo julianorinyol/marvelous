@@ -18,7 +18,7 @@
 
 
 body {
-	color: orange;
+	color: white;
 	font-family: 'helvetica', serif;
     background: #79818e ;
 }
@@ -32,12 +32,16 @@ body {
 }
 #title {
     font-size: 4.2em;
-    margin: 146px 0 12px -3px;
+    /*margin: 146px 0 12px -3px;*/
+    margin: 14px 0 12px -3px;
+
     font-family: 'Merriweather', serif;
+    color: white;
 }
 #intro-paragraph {
 	font-size: 1.3em;
 	margin: 0 0 51px 0;
+	color: #8cffee;
 }
 
 #add-an-item {
@@ -45,6 +49,7 @@ body {
 	/*opacity*/: .7;
 	height:45px;
     margin: 0 0 15px 0;
+    color: white;
 
 }
 #add-an-item p{
@@ -55,11 +60,20 @@ body {
 
 
 /*********************************** Input Area  **********************************************/
+
+
 #input-area {
 	box-sizing: border-box;
 	padding: 0px;
-	width: 29%;
 	height:418px;
+}
+@media screen and (min-width: 992px) {
+	#input-area {
+		box-sizing: border-box;
+		padding: 0px;
+		width: 29%;
+		height:418px;
+	}
 }
 #input-area form {
 	padding: 0;
@@ -68,10 +82,28 @@ body {
     height: 55px;
     /*opacity*/: .5;
     border: 3px white solid;
+    background: #9aa1ab;
 }
 
 #enter-item-input {
     margin: 0 0 14px 0;
+    color: white;
+    background: #9aa1ab;
+}
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;  
 }
 #input-area select {
     margin-bottom: 127px;
@@ -85,33 +117,44 @@ body {
 	position:relative; 
 	padding:0; 
 	margin:0; 
+
 }
 #search { 
 	height:20px; 
 	margin:0; 
 	padding-left: 30px; 
 	height: 36px;
+	background: #9aa1ab;
+	border: white 3px solid;
 }
 
 #search-img { 
 	position:absolute; 
-	right: 5px; 
+	right: 11px;
+	top: 9px;
 }
 /*********************************** Display Area  **********************************************/
 
 #display-area {
 	box-sizing: border-box;
 	background: white;
-	 min-height: 418px;
     /*opacity: .7;*/
 	padding: 5px;
     margin-left: 15px;
-    width: 68.666%;
+    
 }
 .column {
 	padding: 0;
 	margin: .3%;
-    width: 49%;
+}
+@media screen and (min-width: 992px) {
+	.column {
+	    width: 49%;
+	}
+	#display-area {
+		 min-height: 418px;
+		width: 68.666%;
+	}
 }
 .column-title {
     height: 50px;
@@ -125,10 +168,13 @@ body {
 	color: white;
 }
 .list {
+	margin-top: 50px;
 }
 .listing {
 	height: 50px;
 	color: #bcc1c7;
+	position: relative;
+	overflow: hidden;
 }
 .list .listing:nth-child(odd) {
 	color: white;
@@ -141,5 +187,7 @@ body {
     font-size: 1.2em;
 }
 .remove-button {
-	margin-left: 120px;
+	position: absolute;
+    right: 10px;
+    top: 18px;
 }

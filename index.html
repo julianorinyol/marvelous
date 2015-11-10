@@ -28,18 +28,18 @@
     <div class='col-md-4' id='input-area'>
 
           <form class='col-md-12' ng-submit="addItem()">
-            <input class='col-md-12'type="text" id='enter-item-input' placeholder="ENTER ITEM" ng-model="newItem"></input>
-            <select class='col-md-12' ng-model="listName">
+            <input class='col-xs-12'type="text" id='enter-item-input' placeholder="ENTER ITEM" ng-model="newItem"></input>
+            <select class='col-xs-12' ng-model="listName">
               <option value="items">CHOOSE COLUMN</option>
               <option value="items">items</option>
               <option value="otherItems">other items</option>
             </select>
-            <button class='col-md-12' type="submit" id='add-item-button'>ADD ITEM</button>
+            <button class='col-xs-12' type="submit" id='add-item-button'>ADD ITEM</button>
           </form>
 
           <p>SEARCH AN ITEM</p>
-          <div class='col-md-12' id="search-container">
-            <input class='col-md-12'type="text" placeholder='SEARCH' id="search" value>
+          <div class='col-xs-12' id="search-container">
+            <input class='col-xs-12'type="text" placeholder='SEARCH' id="search" ng-model="search">
             <span class="glyphicon glyphicon-search" id='search-img'></span>
           </div>
 
@@ -49,16 +49,16 @@
           <div class='col-md-6 column'>
             <div class="column-title col-md-12"><p>{{column1name}}</p></div>
             <div class='list'>
-              <div class='listing' ng-repeat="item in items" >
-                <span class="item-name">{{item}}</span> <span class='glyphicon glyphicon-remove remove-button'></span>
+              <div class='listing' ng-repeat="item in items | filter:search" >
+                <span class="item-name">{{item}}</span> <span class='glyphicon glyphicon-remove remove-button' ng-click="deleteItem(items, item)"></span>
               </div>
             </div>
           </div>
           <div class='col-md-6 column'>
             <div class="column-title col-md-12"><p>{{column2name}}</p></div>
             <div class='list'>
-              <div class='listing' ng-repeat="otherItem in otherItems">
-                <span class="item-name" >{{otherItem}}</span> <span class='glyphicon glyphicon-remove remove-button'></span>
+              <div class='listing' ng-repeat="otherItem in otherItems | filter:search">
+                <span class="item-name" >{{otherItem}}</span> <span class='glyphicon glyphicon-remove remove-button'  ng-click="deleteItem(otherItems, otherItem)"></span>
               </div>
             </div>
           </div>
