@@ -44,11 +44,47 @@ body {
 #input-area {
 	outline: 5px solid pink;
 	box-sizing: border-box;
-	/*padding: 0px;*/
+	padding: 0px;
 	width: 29%;
 	height:418px;
 }
+#input-area form {
+	padding: 0;
+}
+#input-area button, #input-area select, #enter-item-input {
+    height: 55px;
+    opacity: .5;
+    border: 3px white solid;
+}
 
+
+#enter-item-input {
+    margin: 0 0 14px 0;
+}
+#input-area select {
+    margin-bottom: 127px;
+}
+#input-area button {
+	margin-bottom: 47px;
+}
+
+#search-container { 
+	position:relative; 
+	padding:0; 
+	margin:0; 
+	outline: 5px red dotted;
+}
+#search { 
+	height:20px; 
+	margin:0; 
+	padding-left: 30px; 
+	height: 36px;
+}
+
+#search-img { 
+	position:absolute; 
+	right: 5px; 
+}
 /*********************************** Display Area  **********************************************/
 
 #display-area {

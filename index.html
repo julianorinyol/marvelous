@@ -27,18 +27,21 @@
 
     <div class='col-md-4' id='input-area'>
 
-          <form>
-            <input type="text"></input>
-            <select>
+          <form class='col-md-12'>
+            <input class='col-md-12'type="text" id='enter-item-input' placeholder="ENTER ITEM"></input>
+            <select class='col-md-12'>
+              <option value="items">CHOOSE COLUMN</option>
               <option value="items">items</option>
               <option value="otherItems">other items</option>
             </select>
-            <button type="submit" id='add-item-button'>ADD ITEM</button>
+            <button class='col-md-12' type="submit" id='add-item-button'>ADD ITEM</button>
           </form>
 
           <p>SEARCH AN ITEM</p>
-          <input type='text' placeholder='SEARCH'>
-          <span class="glyphicon glyphicon-search"></span>
+          <div class='col-md-12' id="search-container">
+            <input class='col-md-12'type="text" placeholder='SEARCH' id="search" value>
+            <span class="glyphicon glyphicon-search" id='search-img'></span>
+          </div>
 
         </div>  <!-- input area -->
 

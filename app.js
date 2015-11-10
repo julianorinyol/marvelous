@@ -33,4 +33,5 @@ function($scope){
   	'ITEM3',
   	'ITEM4'
   ];
+  
 }]);
