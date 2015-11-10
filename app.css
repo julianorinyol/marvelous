@@ -7,7 +7,10 @@
 
 
 
- #background-image {
-  	background-image: url(./images/marvelous.jpg);
+ #page-container {
+  	background-image: url(./images/marvelous-skinny.jpg);
   	background-repeat: no-repeat;
+  	height: 1000px;
+    background-size: 800px;
+    background-position: center;
   }
