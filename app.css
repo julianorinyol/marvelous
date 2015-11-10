@@ -5,12 +5,21 @@
 /*light item: #f2f3f5*/
 /*dark item: bcc1c7 */
 
+body {
+	color: orange;
+}
 
-
- #page-container {
-  	background-image: url(./images/marvelous-skinny.jpg);
-  	background-repeat: no-repeat;
-  	height: 1000px;
-    background-size: 800px;
-    background-position: center;
-  }
+#page-container {
+	background-image: url(./images/marvelous-skinny.jpg);
+	background-repeat: no-repeat;
+	height: 1000px;
+	background-size: 760px;
+	background-position: center;
+}
+#title {
+	font-size: 4.5em;
+	margin: 142px 0 13px 0;
+}
+#intro-paragraph {
+	font-size: 1.3em;
+}

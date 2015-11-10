@@ -11,21 +11,40 @@
 
     
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-
+<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="app.css">
   </head>
   <body ng-app="marvelous">
     <div class='container' ng-controller="MainCtrl"  >
-      <div id='page-container' class='col-md-12' >
+      <div class='row col-md-8 col-md-offset-2' id='page-container' class='col-md-12' >
           <h1 id='title'>{{title}}</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing <br>
+          <p id='intro-paragraph'>Lorem Ipsum is simply dummy text of the printing <br>
           and typesetting industry. Lorem Ipsum has been <br>
           the industry's standard dummy text ever since.</p>
           <p id='add-an-item'>ADD AN ITEM</p>
+
+    <div class='col-md-4' id='input-area'>
+
+          <form>
+            <input type="text"></input>
+            <select>
+              <option value="items">items</option>
+              <option value="otherItems">other items</option>
+            </select>
+            <button type="submit" id='add-item-button'>ADD ITEM</button>
+          </form>
+
+          <img src='images/x-light.png'>
+          <span id='img-test'></span>
+          <p>SEARCH AN ITEM</p>
+          <input type='text' ng-model='search' placeholder='Search lists...'>
+          <span class="glyphicon glyphicon-search"></span>
+
+        </div>  <!-- input area -->
+
+
       </div>  <!-- row -->
     </div> <!-- .container -->
-
-
 
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
