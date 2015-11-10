@@ -35,13 +35,27 @@
             <button type="submit" id='add-item-button'>ADD ITEM</button>
           </form>
 
-          <img src='images/x-light.png'>
-          <span id='img-test'></span>
           <p>SEARCH AN ITEM</p>
-          <input type='text' ng-model='search' placeholder='Search lists...'>
+          <input type='text' placeholder='SEARCH'>
           <span class="glyphicon glyphicon-search"></span>
 
         </div>  <!-- input area -->
+
+       <div class='col-md-8' id='display-area'>
+          <div class='col-md-6'>
+            <p>{{column1name}}</p>
+
+            <div class='listing' ng-repeat="item in items" >
+              {{item}} <span class='glyphicon glyphicon-remove'></span>
+            </div>
+          </div>
+          <div class='col-md-6'>
+            <p>{{column2name}}</p>
+            <div class='listing' ng-repeat="otherItem in otherItems">
+              {{otherItem}} <span class='glyphicon glyphicon-remove'></span>
+            </div>
+          </div>
+        </div>  <!-- display area -->
 
 
       </div>  <!-- row -->
