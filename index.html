@@ -23,7 +23,7 @@
           and typesetting industry. Lorem Ipsum has been 
           the industry's standard dummy text ever since.</div>
           
-          <div id='add-an-item'><p >ADD AN ITEM</p></div>
+          <div class="column-gradient" id='add-an-item'><p >ADD AN ITEM</p></div>
 
     <div class='col-lg-4' id='input-area'>
 
@@ -48,7 +48,7 @@
        <div class='col-lg-8' id='display-area'>
           <div id='column-container'>
             <div class='col-lg-6 column'>
-              <div class="column-title col-lg-12"><p>{{column1name}}</p></div>
+              <div class="column-title col-lg-12 column-gradient"><p>{{column1name}}</p></div>
               <div class='list'>
                 <div class='listing' ng-repeat="item in items | filter:search" >
                   <span class="item-name">{{item}}</span> <span class='remove-button' ng-click="deleteItem(items, item)"></span>
@@ -56,7 +56,7 @@
               </div>
             </div>
             <div class='col-lg-6 column'>
-              <div class="column-title col-lg-12"><p>{{column2name}}</p></div>
+              <div class="column-title col-lg-12 column-gradient"><p>{{column2name}}</p></div>
               <div class='list'>
                 <div class='listing' ng-repeat="otherItem in otherItems | filter:search">
                   <span class="item-name" >{{otherItem}}</span> <span class='remove-button'  ng-click="deleteItem(otherItems, otherItem)"></span>

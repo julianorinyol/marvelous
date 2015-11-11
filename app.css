@@ -31,7 +31,7 @@ body {
 }
 
 #add-an-item {
-	background: #505d70;
+	/*background: #505d70;*/
 	height:36px;
     margin: 0 0 15px 0;
     color: white;
@@ -53,7 +53,8 @@ body {
 #add-an-item p {
     text-align: center;
     font-size: 1em;
-    line-height: 40px;
+    line-height: 36px;
+    font-weight: 600;
 }
 
 
@@ -199,12 +200,12 @@ body {
 
 
 .list .listing:nth-child(odd) {
-	color: #f2f3f5;
-	background: #bcc1c7;
-}
-.list .listing:nth-child(even) {
 	color: #79818e;
 	background: #f2f3f5;
+}
+.list .listing:nth-child(even) {
+	color: #f2f3f5;
+	background: #bcc1c7;
 }
 
 
@@ -223,12 +224,18 @@ body {
     background-repeat: no-repeat;
 }
 .list .listing:nth-child(even) .remove-button {
-    background-image: url('images/grey-x.png');
-}
-.list .listing:nth-child(odd) .remove-button {
     background-image: url('images/white-x.png');
 }
+.list .listing:nth-child(odd) .remove-button {
+    background-image: url('images/grey-x.png');
+}
 
+.column-gradient {
+    background: -webkit-linear-gradient(#acbbce, #545f73); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#acbbce, #545f73); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#acbbce, #545f73); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#acbbce, #545f73); /* Standard syntax (must be last) */
+}
 /*********************************** Dev styles **********************************************/
 
 
