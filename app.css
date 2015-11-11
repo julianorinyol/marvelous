@@ -5,17 +5,11 @@
 /*light item: #f2f3f5*/
 /*dark item: bcc1c7 */
 
-/*********************************** Dev styles **********************************************/
 
-#input-area, #search-container, #display-area {
-	/*outline: 5px solid pink;*/
-
-}
-.column, .listing {
-	/*outline: 1px solid red;*/
-}
 /*********************************** General Styles  **********************************************/
-
+#page-container {
+	margin:auto;
+}
 
 body {
 	color: white;
@@ -23,20 +17,12 @@ body {
     background: #79818e ;
 }
 
-#page-container {
-	/*background-image: url(./images/marvelous-skinny.jpg);*/
-	background-repeat: no-repeat;
-	height: 1000px;
-	background-size: 760px;
-	background-position: center;
-}
 #title {
-    font-size: 4.2em;
-    /*margin: 146px 0 12px -3px;*/
-    margin: 14px 0 12px -3px;
-
+    font-size: 3.5em;
+    margin: 8.4% 0 1.7% 0;
     font-family: 'Merriweather', serif;
-    color: white;
+    /*color: white;*/
+    letter-spacing: 0.7px;
 }
 #intro-paragraph {
 	font-size: 1.3em;
@@ -46,21 +32,28 @@ body {
 
 #add-an-item {
 	background: #505d70;
-	/*opacity*/: .7;
-	height:45px;
+	height:36px;
     margin: 0 0 15px 0;
     color: white;
 }
 @media screen and (min-width: 1170px) { 
 	#intro-paragraph {
-		font-size: 1.3em;
-		margin: 0 0 51px 0;
+	    font-size: 1.3em;
+	    letter-spacing: -0.3px;
+	    margin: 0 0 7.6% 0;
+	    width: 61%;
+	    line-height: 1.2em;
+	}
+	#page-container {
+		width: 56%;
+
 	}
 }
-#add-an-item p{
-	text-align: center;
-	font-size: 1.4em;
-	line-height: 45px;
+
+#add-an-item p {
+    text-align: center;
+    font-size: 1em;
+    line-height: 40px;
 }
 
 
@@ -76,7 +69,7 @@ body {
 	#input-area {
 		box-sizing: border-box;
 		padding: 0px;
-		width: 29%;
+		width: 29.5%;
 		height:418px;
 	}
 }
@@ -84,8 +77,7 @@ body {
 	padding: 0;
 }
 #input-area button, #input-area select, #enter-item-input {
-    height: 55px;
-    /*opacity*/: .5;
+    height: 50px;
     border: 3px white solid;
     background: #9aa1ab;
 }
@@ -116,25 +108,31 @@ body {
 
 @media screen and (min-width: 1170px) { 
 	#input-area select {
-	    margin-bottom: 127px;
+	    margin-bottom: 113px;
 	}
 }
 
 #input-area button {
-	margin-bottom: 47px;
+	margin-bottom: 32px;
 	background: #505d70;
 }
 
+#search-an-item {
+	font-size: 0.8em;
+	letter-spacing: 0.7px;
+	margin-bottom: 7px;
+}
 #search-container { 
 	position:relative; 
 	padding:0; 
 	margin:0; 
 
 }
+
 #search { 
 	height:20px; 
 	margin:0; 
-	padding-left: 30px; 
+	padding-left: 14%; 
 	height: 36px;
 	background: #9aa1ab;
 	border: white 3px solid;
@@ -142,7 +140,7 @@ body {
 
 #search-img { 
 	position:absolute; 
-	right: 11px;
+	right: 4%;
 	top: 9px;
 }
 /*********************************** Display Area  **********************************************/
@@ -150,9 +148,8 @@ body {
 #display-area {
 	box-sizing: border-box;
 	background: white;
-    /*opacity: .7;*/
-	padding: 5px;
-    margin-left: 15px;
+	padding: 2px;
+    margin-left: 1.7%;
 }
 #column-container {
 	overflow: hidden;
@@ -164,63 +161,65 @@ body {
 	padding-bottom: 99999px;
 }
 @media screen and (min-width: 1170px) {
+	
 	.column {
 	    width: 49%;
-	    min-height: 400px;
+	    min-height: 354px;
 	    background: #79818e;
 	}
 	#display-area {
-		 min-height: 418px;
+		min-height: 367px;
 		width: 68.666%;
 	}
 	.list {
-		margin-top: 50px;
+		margin-top: 44px;
 	}
 	#column-container {
-	    min-height: 400px;
+	    min-height: 354px;
 	}
 }
+
 .column-title {
-    height: 50px;
+    height: 44px;
     background: #505d70;
-    /*opacity*/: 0.2;
     position: relative;
 }
 .column-title p {
-	line-height: 50px;
+	line-height: 40px;
 	text-align: center;
 	color: white;
 }
 
-
 .listing {
-	height: 50px;
+	height: 44px;
 	color: #bcc1c7;
 	position: relative;
 	overflow: hidden;
 }
+
+
 .list .listing:nth-child(odd) {
 	color: #f2f3f5;
 	background: #bcc1c7;
 }
 .list .listing:nth-child(even) {
-	color: #bcc1c7;
+	color: #79818e;
 	background: #f2f3f5;
 }
 
 
 .item-name {
-    line-height: 50px;
-    margin: 20px;
+    line-height: 44px;
+    margin: 8%;
     font-size: 1.2em;
 }
 .remove-button {
     position: absolute;
-    height: 32px;
-    width: 32px;
-    right: 7px;
-    top: 12px;
-    background-size: 25px 25px;
+    height: 22px;
+    width: 22px;
+    right: 11px;
+    top: 11px;
+    background-size: 22px 22px;
     background-repeat: no-repeat;
 }
 .list .listing:nth-child(even) .remove-button {
@@ -229,3 +228,44 @@ body {
 .list .listing:nth-child(odd) .remove-button {
     background-image: url('images/white-x.png');
 }
+
+/*********************************** Dev styles **********************************************/
+
+
+/*#add-an-item, #input-area button, #input-area select, #enter-item-input, #enter-item-input, #input-area button,#search, .column, .column-title, .list .listing, .listing:nth-child(odd), .list .listing:nth-child(even){
+	opacity: 0.5;
+	color:orange;
+}
+#intro-paragraph, body, #title, #add-an-item, #enter-item-input, ::-webkit-input-placeholder {
+	color: orange;
+}
+:-moz-placeholder, :-ms-input-placeholder {
+	color:orange;
+}*/
+
+/*#input-area, #search-container, #display-area {
+	outline: 5px solid pink;
+}*/
+/*.column, .listing, #input-area button, #input-area select, #enter-item-input, #add-an-item, #search-container {
+	outline: 2px solid red;
+}
+*//*.container {
+	background-image: url(./images/marvelous-skinnier.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: 55%;
+	background-position-y: 50px;
+}*/
+/*#page-container {
+	height: 1000px;
+	background-size: 100%;
+	background-position-y: -20px;
+}*/
+/*.list .listing:nth-child(odd),.list .listing:nth-child(even), .column, .column-container, .column-title, #display-area {
+	background: none;
+	opacity: 1;
+}*/
+/*#page-container * {
+	display: none;
+}
+*/

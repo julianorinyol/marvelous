@@ -17,11 +17,11 @@
   </head>
   <body ng-app="marvelous">
     <div class='container' ng-controller="MainCtrl"  >
-      <div class='row col-lg-8 col-lg-offset-2' id='page-container' class='col-lg-12' >
+      <div class='' id='page-container' >
           <h1 id='title'>{{title}}</h1>
-          <p id='intro-paragraph'>Lorem Ipsum is simply dummy text of the printing <br>
-          and typesetting industry. Lorem Ipsum has been <br>
-          the industry's standard dummy text ever since.</p>
+          <div id='intro-paragraph'>Lorem Ipsum is simply dummy text of the printing 
+          and typesetting industry. Lorem Ipsum has been 
+          the industry's standard dummy text ever since.</div>
           
           <div id='add-an-item'><p >ADD AN ITEM</p></div>
 
@@ -31,13 +31,13 @@
             <input class='col-xs-12'type="text" id='enter-item-input' placeholder="ENTER ITEM" ng-model="newItem"></input>
             <select class='col-xs-12' ng-model="listName">
               <option value="items">CHOOSE COLUMN</option>
-              <option value="items">items</option>
-              <option value="otherItems">other items</option>
+              <option value="items">{{column1name}}</option>
+              <option value="otherItems">{{column2name}}</option>
             </select>
             <button class='col-xs-12' type="submit" id='add-item-button'>ADD ITEM</button>
           </form>
 
-          <p>SEARCH AN ITEM</p>
+          <p id='search-an-item'>SEARCH AN ITEM</p>
           <div class='col-xs-12' id="search-container">
             <input class='col-xs-12'type="text" placeholder='SEARCH' id="search" ng-model="search">
             <span class="glyphicon glyphicon-search" id='search-img'></span>
