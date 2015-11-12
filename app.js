@@ -5,6 +5,7 @@ function($scope){
 	$scope.title = 'Marvelous!';
 	$scope.column1name = 'COLUMN 1';
 	$scope.column2name = 'COLUMN 2';
+  
 	$scope.lists = [
 		{
 			name: 'COLUMN 1',
@@ -38,7 +39,6 @@ function($scope){
       $scope.newItem = '';
     };
     $scope.addItemFromDrag = function(columnNum, index) {
-    	console.log('gfd');
     	if(columnNum ==1) {
     		arr = $scope.lists[1];
     		otherArr = $scope.lists[0];
@@ -59,23 +59,40 @@ function($scope){
     	$scope.$apply();
     };
     function drag(ev) {
-		// debugger;
 	    ev.dataTransfer.setData("text", ev.target.id);
-	    console.log('ev.target.id',ev.target.id);
-	    console.log('ev',ev);;
 	}
     $scope.deleteItem = function(array, element) {
-    	var index = array.indexOf(element);
-    	if (index > -1) {
-			array.splice(index, 1);
-		}
+      	var index = array.indexOf(element);
+      	if (index > -1) {
+  			array.splice(index, 1);
+  		}
     }
     $scope.listName = 'items'
 	$scope.newItem = '';
-}]);
-
-
-angular.module('marvelous')
+}])
+.directive('contentArea', function () {
+    return {
+        // restrict: 'E',
+        templateUrl: 'partials/content-area.html',
+        link: function() {
+          var columnOne = document.getElementById('column-one');
+          var columnTwo = document.getElementById('column-two');
+          
+          // setDragBindings();
+          columnOne.addEventListener('dragenter', preventTheDefault , false);
+          columnTwo.addEventListener('dragenter', preventTheDefault , false);
+          columnOne.addEventListener('dragover', preventTheDefault , false);
+          columnTwo.addEventListener('dragover', preventTheDefault , false);
+          columnOne.addEventListener('drop', drop , false);
+          columnTwo.addEventListener('drop', drop, false);
+        }
+    }
+})
+.directive('headerArea', function () {
+  return {
+    templateUrl: 'partials/header-area.html'
+  }
+})
 .directive("contenteditable", function() {
   return {
     restrict: "A",
@@ -96,3 +113,4 @@ angular.module('marvelous')
     }
   };
 });
+

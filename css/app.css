@@ -86,7 +86,7 @@ body {
 	clear: both;
 }
 #select-container select {
-	/*background: url('images/arrow-down.png');*/
+	/*background: url('../images/arrow-down.png');*/
 	background: #9aa1ab;
     background-repeat: no-repeat;
     background-position: 162px 18px;
@@ -119,7 +119,7 @@ body {
     pointer-events: none;
     height: 10px;
     z-index: 1;
-    background: url('images/arrow-down.png') no-repeat;
+    background: url('../images/arrow-down.png') no-repeat;
 }
 
 #enter-item-input {
@@ -189,8 +189,9 @@ body {
 	box-sizing: border-box;
 	background: white;
 	padding: 2px;
-    margin-left: 1.7%;
-    margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 1.7%;
+  margin-top: 50px;
 }
 #column-container {
 	overflow: hidden;
@@ -265,10 +266,10 @@ body {
     background-repeat: no-repeat;
 }
 .list .listing:nth-child(even) .remove-button {
-    background-image: url('images/white-x.png');
+    background-image: url('../images/white-x.png');
 }
 .list .listing:nth-child(odd) .remove-button {
-    background-image: url('images/grey-x.png');
+    background-image: url('../images/grey-x.png');
 }
 
 .column-gradient {
@@ -298,7 +299,7 @@ body {
 	outline: 2px solid red;
 }
 *//*.container {
-	background-image: url(./images/marvelous-skinnier.jpg);
+	background-image: url(../images/marvelous-skinnier.jpg);
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: 55%;

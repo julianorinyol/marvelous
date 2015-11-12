@@ -1,0 +1,13 @@
+// function contentArea(){
+//   return {
+//     restrict: 'E',
+//     templateUrl: 'content-area.html',
+//     link:link,
+//   }
+// }
+
+// function link(scope, element, attr){
+//   console.log("contentArea  Connected");
+// }
+
+// module.exports = contentArea;
