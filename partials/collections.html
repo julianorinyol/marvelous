@@ -1,0 +1,12 @@
+<div ng-repeat="collection in collections" class='col-lg-6 column' ondragenter="preventTheDefault(event)" ondragover="preventTheDefault(event)" ondrop="drop(event)" data-num='{{$index + 1}}' id='column-{{$index + 1}}'>
+
+  <div class="column-title col-lg-12 column-gradient"><p ng-cloak ng-cloak>{{collection.name}}</p>
+  </div>
+  <div class='list'>
+
+    <div id="listing-{{$index}}" ondragstart="drag(event)" data-column="{{$index}}" class='listing animate' draggable='true' ng-repeat="item in collection.list | filter:search" >
+
+      <span class="item-name" ng-cloak>{{item}}</span> <span class='remove-button' ng-click="deleteItem(collection.list, item)"></span>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,8 @@
 window.addEventListener('load', doFirst, false);
 
 function doFirst() {
-	var columnOne = document.getElementById('column-one');
-	var columnTwo = document.getElementById('column-two');
+	var columnOne = document.getElementById('column-1');
+	var columnTwo = document.getElementById('column-2');
 }
 
 function preventTheDefault(e){
@@ -10,13 +10,14 @@ function preventTheDefault(e){
 }
 
 function drag(ev) {
+    console.log('drag');
     ev.dataTransfer.setData("text", ev.target.id);
 }
 
 function drop(ev) {
+    console.log('drop');
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-
     element = angular.element(document.getElementById(data));
 
     columnNum = element[0].dataset.column;

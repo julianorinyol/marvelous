@@ -17,14 +17,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script>
 
   </head>
-  <body ng-app="marvelous">
-    <div class='container' ng-controller="MainCtrl"  >
+  <body ng-app="marvelous" ng-element-ready="">
+    <div class='container' ng-controller="MainCtrl">
 
       <div class='' id='page-container'>
         
         <header-area></header-area>
 
-        <content-area></content-area>
+        <input-area></input-area>
+
+        <div class='col-lg-8' id='display-area'>
+          <!-- Column container is used only to allow columns to remain the same size, when one is bigger. -->
+          <div id='column-container'>
+                
+            <collections collections='lists'></collections>   
+                
+          </div> <!-- column container --> 
+        </div> <!-- display area -->
         
       </div>  <!-- row -->
     </div> <!-- .container -->
@@ -35,7 +44,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
     <script src="app.js"></script>
     <script src="js/drag-n-drop.js"></script>
-
+<div when-ready="isReady()" ready-check="checkIfReady()" wait-for-interpolation="true">
+</div>
   
   </body>
 </html>
